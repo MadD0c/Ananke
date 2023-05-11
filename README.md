@@ -27,3 +27,15 @@
 #  FILAMENT_RUNOUT ; trigger filament runout
 #insert_gcode:
 #  LOAD_FILAMENT ; trigger filament load
+
+Here is how the above example would work in this new format:
+
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder] + extruder_temperature_offset[initial_extruder]}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=bed_temp VALUE={first_layer_bed_temperature[initial_extruder]}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_type}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_count VALUE={total_layer_count}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=tool_count VALUE={total_toolchanges}
+    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nevermore VALUE=True
+    START_PRINT
