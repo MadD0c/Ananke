@@ -19,29 +19,29 @@ gcode:
     {% if trigger_layer > printer.print_stats.info.current_layer and trigger_layer <= printer.print_stats.info.total_layer %}
         SET_GCODE_VARIABLE MACRO=_LAYER_MACRO VARIABLE=trigger_layer VALUE={trigger_layer}
         SET_GCODE_VARIABLE MACRO=_LAYER_MACRO VARIABLE=trigger_command VALUE={trigger_command}
-        {printer["gcode_macro _printcfg"].output|int} "Succesfully scheduled command for Layer {trigger_layer}."
+        {printer["gcode_macro _defaultcfg"].output|int} "Succesfully scheduled command for Layer {trigger_layer}."
     {% elif  trigger_layer > printer.print_stats.info.total_layer %}
-        {printer["gcode_macro _printcfg"].error_output|int} "ERROR creating schedule."
-        {printer["gcode_macro _printcfg"].error_output|int} "Layer {trigger_layer} does not exist."
-        {printer["gcode_macro _printcfg"].error_output|int} "There are only {printer.print_stats.info.total_layer} layers."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "ERROR creating schedule."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "Layer {trigger_layer} does not exist."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "There are only {printer.print_stats.info.total_layer} layers."
     {% elif  trigger_layer > printer.print_stats.info.total_layer %}
-        {printer["gcode_macro _printcfg"].error_output|int} "ERROR creating schedule."
-        {printer["gcode_macro _printcfg"].error_output|int} "Layer {trigger_layer} is in the past."
-        {printer["gcode_macro _printcfg"].error_output|int} "The current layer is {printer.print_stats.info.current_layer}."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "ERROR creating schedule."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "Layer {trigger_layer} is in the past."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "The current layer is {printer.print_stats.info.current_layer}."
     {% elif trigger_layer <= 0 %}
-        {printer["gcode_macro _printcfg"].error_output|int} "ERROR creating schedule."
-        {printer["gcode_macro _printcfg"].error_output|int} "Layer {trigger_layer} does not exist."
-        {printer["gcode_macro _printcfg"].output|int} "Please use SCHEDULE_CANCEL to cancel layer schedules."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "ERROR creating schedule."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "Layer {trigger_layer} does not exist."
+        {printer["gcode_macro _defaultcfg"].output|int} "Please use SCHEDULE_CANCEL to cancel layer schedules."
     {% else %}
-        {printer["gcode_macro _printcfg"].error_output|int} "ERROR creating schedule."
-        {printer["gcode_macro _printcfg"].error_output|int} "UNKNOWN ERROR, contact developer."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "ERROR creating schedule."
+        {printer["gcode_macro _defaultcfg"].error_output|int} "UNKNOWN ERROR, contact developer."
     {% endif %}
 [gcode_macro SCHEDULE_CANCEL]
 description: Cancel any scheduled layer command
 gcode:
     SET_GCODE_VARIABLE MACRO=_LAYER_MACRO VARIABLE=trigger_layer VALUE=0
     SET_GCODE_VARIABLE MACRO=_LAYER_MACRO VARIABLE=trigger_command VALUE="M117"
-    {printer["gcode_macro _printcfg"].output|int} "Succesfully canceled scheduled layer command."
+    {printer["gcode_macro _defaultcfg"].output|int} "Succesfully canceled scheduled layer command."
 [gcode_macro _LAYER_MACRO]
 variable_trigger_layer: 0
 variable_trigger_command: "M117"
@@ -50,7 +50,7 @@ gcode:
     {% set commnd = printer["gcode_macro _LAYER_MACRO"].trigger_command|default("M117")|string %}
     {% if t_layer > 0 %} ;Don't trigger at layer 0
         {% if printer.print_stats.info.current_layer == t_layer %} ;Are we at the trigger layer?
-            {printer["gcode_macro _printcfg"].output|int} "Layer {t_layer}: Event Triggered."
+            {printer["gcode_macro _defaultcfg"].output|int} "Layer {t_layer}: Event Triggered."
             {commnd} ;Run Layer Command
         {% endif %}
     {% endif %}
