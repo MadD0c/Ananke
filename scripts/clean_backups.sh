@@ -16,4 +16,4 @@
 # You should have received a copy of the GNU General Public License
 # along with config.  If not, see <http://www.gnu.org/licenses/>.
 
-~/printer_data/config/macros/scripts/move_files.sh ~/printer_data/config/ ~/printer_data/config/archive/ "~/printer_data/config/printer-*.cfg"
+/home/theseus/printer_data/config/macros/scripts/move_files.sh /home/theseus/printer_data/config/ ~/printer_data/config/archive/ "/home/theseus/printer_data/config/printer-*.cfg"
