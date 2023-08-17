@@ -13,7 +13,7 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 ## Requrements
 
 ## Installation
-Clone this repository into your 'printer_data/config'
+Clone this repository into your `printer_data/config`
 ```
 git clone https://github.com/MadD0c/Icarus.git
 ```
@@ -58,7 +58,7 @@ SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperat
 ```
 It would be possible to set this up in Ultimaker Cura. Unfortunately due to its issues with layer change placeholders and commands as well as the limited UI, doing such would require post processing plugin.
 ## Updating
-The easist to update the collection is via Moonraker Update Manager. Add below to your 'moonraker.cfg'
+The easist to update the collection is via Moonraker Update Manager. Add below to your `moonraker.cfg`
 ```yaml
 [update_manager Icarus]
 type: git_repo
