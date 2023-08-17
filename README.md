@@ -1,4 +1,14 @@
-# klipper-macros
+# Icarus
+
+These are the klipper macros for my panthion of printers. Initially started working on them with my first printer - Theseus (Kliperized Ender3 V2). Since construction of Deadalus - Voron Trident 300mm I have made numerous extensions to make it more versitile.
+
+Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
+
+The foundation for this collection (as well as the inspiration) comes from Rootiest's Zippy-Klipper-Config (https://github.com/rootiest/zippy-klipper_config). I have supplimented his work with: 
+the complete version of KAMP
+an notification system which works directly with moonraker's notify
+LED templating by digitalninja-ro (https://github.com/digitalninja-ro/klipper-neopixel)
+Nozzle cleaning macros from edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod(https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
 ###############################
 ### Filament Motion Sensor ####
