@@ -10,21 +10,13 @@ an notification system which works directly with moonraker's notify
 LED templating by digitalninja-ro (https://github.com/digitalninja-ro/klipper-neopixel)
 Nozzle cleaning macros from edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod(https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
-###############################
-### Filament Motion Sensor ####
-### https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor ###
-###############################
-#[filament_motion_sensor smart_filament_sensor]
-#switch_pin: ^PB6
-#detection_length: 7.0
-#extruder: extruder
-#pause_on_runout: False ; pause handled by macro
-#runout_gcode:
-#  FILAMENT_RUNOUT ; trigger filament runout
-#insert_gcode:
-#  LOAD_FILAMENT ; trigger filament load
+#    Requrements
 
-Here is how the above example would work in this new format:
+#    Installation
+
+#    Configuration
+
+#    Slicer Steup
 
     SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder] + extruder_temperature_offset[initial_extruder]}
     SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=bed_temp VALUE={first_layer_bed_temperature[initial_extruder]}
