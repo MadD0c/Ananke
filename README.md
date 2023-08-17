@@ -13,10 +13,14 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 ## Requrements
 
 ## Installation
-
+Clone this repository into your 'printer_data/config'
+```
+git clone https://github.com/MadD0c/Icarus.git
+```
 ## Configuration
 
 ## Slicer Setup
+Add these to your slicer profiles. This is compatable with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
 #### Start G-code
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder]}
@@ -29,7 +33,7 @@ START_PRINT
 ```
 END_PRINT
 ```
-### Before layer change
+#### Before layer change
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_z VALUE={layer_z}
@@ -50,8 +54,9 @@ SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_settin
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nevermore VALUE=False
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=use_scrubber VALUE=False
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature} ;exclude in Prusaslicer or set manually
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature}
 ```
+It would be possible to set this up in Ultimaker Cura. Unfortunately due to its issues with layer change placeholders and commands as well as the limited UI, doing such would require post processing plugin.
 ## Updating
 The easist to update the collection is via Moonraker Update Manager. Add below to your 'moonraker.cfg'
 ```yaml
