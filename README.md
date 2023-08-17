@@ -5,10 +5,10 @@ These are the klipper macros for my panthion of printers. Initially started work
 Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
 
 The foundation for this collection (as well as the inspiration) comes from Rootiest's Zippy-Klipper-Config (https://github.com/rootiest/zippy-klipper_config). I have supplimented his work with: 
-the complete version of KAMP
-an notification system which works directly with moonraker's notify
-LED templating by digitalninja-ro (https://github.com/digitalninja-ro/klipper-neopixel)
-Nozzle cleaning macros from edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod(https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
+- The complete version of KAMP
+- an notification system which works directly with moonraker's notify
+- LED templating by digitalninja-ro (https://github.com/digitalninja-ro/klipper-neopixel)
+- Nozzle cleaning macros from edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod(https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
 ## Requrements
 
@@ -26,24 +26,25 @@ SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nozzle_size VALUE=0.4 ; Manually set
 START_PRINT
 ```
 ### Before layer change
-
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_z VALUE={layer_z}
-    LAYER_CHANGE_BEFORE
-
+```
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_z VALUE={layer_z}
+LAYER_CHANGE_BEFORE
+```
 ### After layer change
-
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
-    LAYER_CHANGE_AFTER
-
+```
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
+LAYER_CHANGE_AFTER
+```
 ### End Print
-
-    END_PRINT
-
+```
+END_PRINT
+```
 ### With each Filament preset
-
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_settings_id[0]}
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nevermore VALUE=False
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=use_scrubber VALUE=False
-    SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature} ;exclude in Prusaslicer or set manually
+```
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_settings_id[0]}
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nevermore VALUE=False
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=use_scrubber VALUE=False
+SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature} ;exclude in Prusaslicer or set manually
+```
