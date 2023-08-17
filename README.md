@@ -13,11 +13,16 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
 ## Requrements
+For now this is fully contained. The only external requirement is the install of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 ## Installation
 Clone this repository into your `printer_data/config`
 ```
 git clone https://github.com/MadD0c/Icarus.git
+```
+Add below to your `printer.cfg` file.
+```
+[include Icarus/Icarus.cfg]
 ```
 ## Configuration
 
