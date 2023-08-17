@@ -26,6 +26,7 @@ Add below to your `printer.cfg` file.
 ```
 ## Configuration
 ### Printer Setup
+All settings available to alter and customize are available in in the `settings.cfg` file in the repository root.
 ### Slicer Setup
 Add these to your slicer profiles. This is compatable with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
 ##### Start G-code
