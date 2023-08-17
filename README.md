@@ -1,4 +1,6 @@
-# Icarus
+<h1 align="center">
+Icarus
+</h1>
 
 These are the klipper macros for my panthion of printers. Initially started working on them with my first printer - Theseus (Kliperized Ender3 V2). Since construction of Deadalus - Voron Trident 300mm I have made numerous extensions to make it more versitile.
 
