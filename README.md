@@ -18,7 +18,6 @@ Nozzle cleaning macros from edwardyeeks Decontaminator Purge Bucket Nozzle Scrub
 
 ## Slicer Setup
 ### Start Print
-
 ```python
     SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder]}
     SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=bed_temp VALUE={first_layer_bed_temperature[initial_extruder]}
