@@ -66,3 +66,9 @@ origin: https://github.com/MadD0c/Icarus.git
 path: ~/printer_data/config/Icarus
 managed_services: klipper
 ```
+
+## To-Do
+I have a few upcoming plans for improving this collection. Unfortunatly I have not got a timeline for now as it all depends on me implimenting them on Daedalus
+- Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)
+- Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
+- Add Support for [ERCF](https://github.com/EtteGit/EnragedRabbitProject)
