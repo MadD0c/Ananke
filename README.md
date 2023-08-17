@@ -13,7 +13,7 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
 ## Requrements
-For now this is fully contained. The only external requirement is the install of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+For now this is fully contained. The only external requirement is the install of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging). This repository also needs to be cloned into your `printer_data/config`
 
 ## Installation
 Clone this repository into your `printer_data/config`
@@ -25,10 +25,10 @@ Add below to your `printer.cfg` file.
 [include Icarus/Icarus.cfg]
 ```
 ## Configuration
-
-## Slicer Setup
+### Printer Setup
+### Slicer Setup
 Add these to your slicer profiles. This is compatable with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
-#### Start G-code
+##### Start G-code
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder]}
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=bed_temp VALUE={first_layer_bed_temperature[initial_extruder]}
@@ -36,26 +36,26 @@ SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=total_layer_count VALUE={total_layer
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nozzle_size VALUE=0.4 ; Manually set 
 START_PRINT
 ```
-#### End G-code
+##### End G-code
 ```
 END_PRINT
 ```
-#### Before layer change
+##### Before layer change
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_z VALUE={layer_z}
 LAYER_CHANGE_BEFORE
 ```
-#### After layer change
+##### After layer change
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
 LAYER_CHANGE_AFTER
 ```
-#### Change Filament G-code
+##### Change Filament G-code
 ```
 M600
 ```
-#### Filament preset
+##### Filament preset
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_settings_id[0]}
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
