@@ -38,7 +38,8 @@ gcode: # This line is required by Klipper.
 ```
 ## Configuration
 ### Printer Setup
-All settings available to alter and customize are available in in the `settings.cfg` file in the repository root.
+All customized options are to be added to `printer.cfg`. Available can be found in `system/settings.cfg`. Do Not change options in `settings.cfg` as these are defaults and will not persist if repo updated.
+
 ### Slicer Setup
 Add these to your slicer profiles. This is compatable with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
 ##### Start G-code
