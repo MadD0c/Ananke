@@ -25,7 +25,7 @@ Clone this repository into your `printer_data/config`
 ```
 git clone https://github.com/MadD0c/Ananke.git
 ```
-Add below to your `printer.cfg` file.
+Add below to your `printer.cfg` file. All options available can be found in `system/settings.cfg`
 ```
 [gcode_macro _optionscfg]
 # Place all your customized options here. This will prevent them resetting on updates as well make backing up easier.
