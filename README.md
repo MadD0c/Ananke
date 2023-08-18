@@ -1,5 +1,5 @@
 <h1 align="center">
-Icarus
+Ananke
 </h1>
 
 These are the klipper macros for my pantheon of printers. 
@@ -21,11 +21,11 @@ The only external requirement is the install of [KAMP](https://github.com/kyleis
 ## Installation
 Clone this repository into your `printer_data/config`
 ```
-git clone https://github.com/MadD0c/Icarus.git
+git clone https://github.com/MadD0c/Ananke.git
 ```
 Add below to your `printer.cfg` file.
 ```
-[include Icarus/Icarus.cfg]
+[include Ananke/ananke.cfg]
 ```
 ## Configuration
 ### Printer Setup
