@@ -10,13 +10,13 @@ I initially started working on them with my first printer - Theseus (Kliperized 
 
 Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
 
-The foundation for this collection (as well as the inspiration) comes from [Rootiest's Zippy-Klipper-Config](https://github.com/rootiest/zippy-klipper_config). I have supplimented his work with: 
-- Compatability with the complete version of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+The foundation for this collection (as well as the inspiration) comes from [Rootiest's Zippy-Klipper-Config](https://github.com/rootiest/zippy-klipper_config). I have supplemented his work with: 
+- Compatibility with the complete version of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 - A notification system which works directly with moonraker's notify
 - LED templating by [digitalninja-ro](https://github.com/digitalninja-ro/klipper-neopixel)
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
-## Requrements
+## Requirements
 For now this is fully contained.
 The only external requirement is the install of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging). This repository also needs to be cloned into your `printer_data/config`
 
@@ -41,7 +41,7 @@ gcode: # This line is required by Klipper.
 All customized options are to be added to `printer.cfg`. Available can be found in `system/settings.cfg`. Do Not change options in `settings.cfg` as these are defaults and will not persist if repo updated.
 
 ### Slicer Setup
-Add these to your slicer profiles. This is compatable with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
+Add these to your slicer profiles. This is compatible with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
 ##### Start G-code
 ```
 SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder]}
@@ -79,7 +79,7 @@ SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperat
 ```
 It would be possible to set this up in Ultimaker Cura. Unfortunately due to its issues with layer change placeholders and commands as well as the limited UI, doing such would require post processing plugin.
 ## Updating
-The easist to update the collection is via Moonraker Update Manager. Add below to your `moonraker.cfg`
+The easiest to update the collection is via Moonraker Update Manager. Add below to your `moonraker.cfg`
 ```yaml
 [update_manager Ananke]
 type: git_repo
@@ -89,7 +89,7 @@ managed_services: klipper
 ```
 
 ## To-Do
-I have a few upcoming plans for improving this collection. Unfortunatly I have not got a timeline for now as it all depends on me implimenting them on Daedalus
+I have a few upcoming plans for improving this collection. Unfortunately I have not got a timeline for now as it all depends on me implementing them on Daedalus
 - [ ] Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)
 - [ ] Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
 - [ ] Add Support for [ERCF](https://github.com/EtteGit/EnragedRabbitProject)
