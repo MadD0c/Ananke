@@ -27,6 +27,13 @@ git clone https://github.com/MadD0c/Ananke.git
 ```
 Add below to your `printer.cfg` file.
 ```
+[gcode_macro _optionscfg]
+# Place all your customized options here. This will prevent them resetting on updates as well make backing up easier.
+# example:
+#variable_audio_status: False
+gcode: # This line is required by Klipper.
+# Any code you put here will run at klipper startup.
+
 [include Ananke/ananke.cfg]
 ```
 ## Configuration
@@ -73,10 +80,10 @@ It would be possible to set this up in Ultimaker Cura. Unfortunately due to its 
 ## Updating
 The easist to update the collection is via Moonraker Update Manager. Add below to your `moonraker.cfg`
 ```yaml
-[update_manager Icarus]
+[update_manager Ananke]
 type: git_repo
-origin: https://github.com/MadD0c/Icarus.git
-path: ~/printer_data/config/Icarus
+origin: https://github.com/MadD0c/Ananke.git
+path: ~/printer_data/config/Ananke
 managed_services: klipper
 ```
 
