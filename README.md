@@ -3,6 +3,7 @@ Icarus
 </h1>
 
 These are the klipper macros for my pantheon of printers. 
+
 I initially started working on them with my first printer - Theseus (Kliperized Ender3 V2). Since construction of Deadalus (Voron Trident 300mm) I have made numerous extensions to make it more versatile and adaptable. 
 
 Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
