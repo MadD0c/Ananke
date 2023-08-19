@@ -17,81 +17,19 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 
 ## Requirements
-For now this is fully contained.
-The only external requirement is the install of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging). This repository also needs to be cloned into your `printer_data/config`
-
+Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Requirements) for details.
 ## Installation
-Clone this repository into your `printer_data/config`
-```
-git clone https://github.com/MadD0c/Ananke.git
-```
-Add below to your `printer.cfg` file. All options available can be found in `system/settings.cfg`
-```
-[gcode_macro _optionscfg]
-# Place all your customized options here. This will prevent them resetting on updates as well make backing up easier.
-# example:
-#variable_audio_status: False
-gcode: # This line is required by Klipper.
-# Any code you put here will run at klipper startup.
-
-[include Ananke/ananke.cfg]
-```
+Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Installation) for details.
 ## Configuration
-### Printer Setup
-All customized options are to be added to `printer.cfg`. Available can be found in `system/settings.cfg`. Do Not change options in `settings.cfg` as these are defaults and will not persist if repo updated.
-
-### Slicer Setup
-Add these to your slicer profiles. This is compatible with the Slic3r family (PrucerSlicer, SuperSlicer and OrcaSlicer).
-##### Start G-code
-```
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=extruder_temp VALUE={first_layer_temperature[initial_extruder]}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=bed_temp VALUE={first_layer_bed_temperature[initial_extruder]}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=total_layer_count VALUE={total_layer_count}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nozzle_size VALUE=0.4 ; Manually set 
-START_PRINT
-```
-##### End G-code
-```
-END_PRINT
-```
-##### Before layer change
-```
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_z VALUE={layer_z}
-LAYER_CHANGE_BEFORE
-```
-##### After layer change
-```
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=layer_num VALUE={layer_num}
-LAYER_CHANGE_AFTER
-```
-##### Change Filament G-code
-```
-M600
-```
-##### Filament preset
-```
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_type VALUE={filament_settings_id[0]}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=material_color VALUE={filament_colour}
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=nevermore VALUE=False
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=use_scrubber VALUE=False
-SET_GCODE_VARIABLE MACRO=_printcfg VARIABLE=chamber_temp VALUE={chamber_temperature}
-```
-It would be possible to set this up in Ultimaker Cura. Unfortunately due to its issues with layer change placeholders and commands as well as the limited UI, doing such would require post processing plugin.
+Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Configuration) for details.
 ## Updating
-The easiest to update the collection is via Moonraker Update Manager. Add below to your `moonraker.cfg`
-```yaml
-[update_manager Ananke]
-type: git_repo
-origin: https://github.com/MadD0c/Ananke.git
-path: ~/printer_data/config/Ananke
-managed_services: klipper
-```
+Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Updating) for details.
 
 ## To-Do
 I have a few upcoming plans for improving this collection. Unfortunately I have not got a timeline for now as it all depends on me implementing them on Daedalus
 - [ ] Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)
 - [ ] Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
 - [ ] Add Support for [ERCF](https://github.com/EtteGit/EnragedRabbitProject)
+- [ ] Ultimaker Cura Support
 
   [^1]:https://www.maicar.com/GML/Ananke.html
