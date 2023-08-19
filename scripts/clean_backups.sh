@@ -16,4 +16,4 @@
 # You should have received a copy of the GNU General Public License
 # along with config.  If not, see <http://www.gnu.org/licenses/>.
 
-${HOME}/printer_data/config/Icarus/scripts/move_files.sh ${HOME}/printer_data/config/ ${HOME}/printer_data/config/archive/ "${HOME}/printer_data/config/printer-*.cfg"
+${HOME}/printer_data/config/Ananke/scripts/move_files.sh ${HOME}/printer_data/config/ ${HOME}/printer_data/config/archive/ "${HOME}/printer_data/config/printer-*.cfg"
