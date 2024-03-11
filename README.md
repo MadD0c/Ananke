@@ -17,10 +17,11 @@ I initially started working on them with my first printer - Theseus (Kliperized 
 Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
 
 The foundation for this collection (as well as the inspiration) comes from [Rootiest's Zippy-Klipper-Config](https://github.com/rootiest/zippy-klipper_config). I have supplemented his work with: 
-- Compatibility with the complete version of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+- ~~Compatibility with the complete version of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)~~ (Removed in favour of Klipper's built in adaptive meshing
 - A notification system which works directly with moonraker's notify
-- LED templating by [digitalninja-ro](https://github.com/digitalninja-ro/klipper-neopixel)
+- ~~LED templating by [digitalninja-ro](https://github.com/digitalninja-ro/klipper-neopixel)~~ (Changed to [Klipper LED Effects](https://github.com/julianschill/klipper-led_effect) as more adaptable)
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
+- Interuptable Heat Soak system by ([garethky](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/heatsoak.readme.md))
 
 ## Requirements
 Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Requirements) for details.
