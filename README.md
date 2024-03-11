@@ -1,4 +1,10 @@
 <h1 align="center">
+!!!!!  I have been doing a lot of changes to this over the last few weeks so unfortunatly the Wiki is a bit out of date.
+Please be patient while I get it updated
+Thanks !!!!!!!
+</h1>
+
+<h1 align="center">
 Ananke
 </h1>
 
