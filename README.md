@@ -36,8 +36,8 @@ Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Updating) for detail
 
 ## To-Do
 I have a few upcoming plans for improving this collection. Unfortunately I have not got a timeline for now as it all depends on me implementing them on Daedalus
-- [X] Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)
-- [X] Add Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013)
+- ~[X] Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)~
+- ~[X] Add Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013)~
 - [ ] Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
 - [ ] Add Support for [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md)
 - [ ] Add Support for [ERCF](https://github.com/EtteGit/EnragedRabbitProject)
