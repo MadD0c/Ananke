@@ -21,7 +21,7 @@ The foundation for this collection (as well as the inspiration) comes from [Root
 - A notification system which works directly with moonraker's notify
 - ~~LED templating by [digitalninja-ro](https://github.com/digitalninja-ro/klipper-neopixel)~~ (Changed to [Klipper LED Effects](https://github.com/julianschill/klipper-led_effect) as more adaptable)
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
-- Interuptable Heat Soak system by ([garethky](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/heatsoak.readme.md))
+- [Interuptable Heat Soak system](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/heatsoak.readme.md)
 - Partial Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra) (Still working on adjusting Pressure Advance based on Nozzle and checking in Start Macro)
 - Innitial Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013) (Still needs clean up in Start Macro)
 
