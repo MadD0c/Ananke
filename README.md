@@ -35,7 +35,7 @@ I have a few upcoming plans for improving this collection. Unfortunately I have 
 - [X] ~Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)~
 - [X] ~Add Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013)~
 - [ ] Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
-- [X] ~Add Support for [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md)
+- [X] ~Add Support for [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md)~
 - [ ] Add Support for [ERCFv2](https://github.com/Enraged-Rabbit-Community/ERCF_v2)
 - [ ] Ultimaker Cura Support
 
