@@ -1,7 +1,6 @@
 <h1 align="center">
-!!!!!  I have been doing a lot of changes to this over the last few weeks so unfortunatly the Wiki is a bit out of date.
+I have been doing a lot of changes to this over the last few weeks so unfortunatly the Wiki is a bit out of date.
 Please be patient while I get it updated
-Thanks !!!!!!!
 </h1>
 
 <h1 align="center">
@@ -17,13 +16,15 @@ I initially started working on them with my first printer - Theseus (Kliperized 
 Settings and print variables are all managed via macro variables. This allows them to be adjusted as needed at the time of print or on the fly.
 
 The foundation for this collection (as well as the inspiration) comes from [Rootiest's Zippy-Klipper-Config](https://github.com/rootiest/zippy-klipper_config). I have supplemented and addapted his work with: 
-- ~~Compatibility with the complete version of [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)~~ (Removed in favour of Klipper's built in adaptive meshing
+- Support for Klipper's built in adaptive meshing
 - A notification system which works directly with moonraker's notify
-- ~~LED templating by [digitalninja-ro](https://github.com/digitalninja-ro/klipper-neopixel)~~ (Changed to [Klipper LED Effects](https://github.com/julianschill/klipper-led_effect) as more adaptable)
+- Support for Knomi Notifications (Both original BTT and [DiverOfDark](https://github.com/DiverOfDark/KNOMI) firmwares)
+- [Klipper LED Effects](https://github.com/julianschill/klipper-led_effect) as more adaptable)
 - Nozzle cleaning macros from [edwardyeeks Decontaminator Purge Bucket Nozzle Scrubber Mod](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
 - [Interuptable Heat Soak system](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/heatsoak.readme.md)
 - Partial Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra) (Still working on adjusting Pressure Advance based on Nozzle and checking in Start Macro)
-- Innitial Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013) (Still needs clean up in Start Macro)
+- [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013)
+- Modified [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md) to add offset adjustment for filament type
 
 ## Requirements
 Please see the [Wiki](https://github.com/MadD0c/Ananke/wiki/Requirements) for details.
@@ -39,8 +40,8 @@ I have a few upcoming plans for improving this collection. Unfortunately I have 
 - [X] ~Add Support for [NozzleChanger](https://github.com/garethky/change-nozzle-klipper-extra)~
 - [X] ~Add Support for [Build Sheet Manager & “Adjust Live Z”](https://klipper.discourse.group/t/build-sheet-manager-adjust-live-z/4013)~
 - [ ] Add Support for [Spoolman](https://github.com/Donkie/Spoolman)
-- [ ] Add Support for [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md)
-- [ ] Add Support for [ERCF](https://github.com/EtteGit/EnragedRabbitProject)
+- [X] ~Add Support for [Filament Handling Macros](https://github.com/garethky/klipper-voron2.4-config/blob/mainline/printer_data/config/filaments.readme.md)
+- [ ] Add Support for [ERCFv2](https://github.com/Enraged-Rabbit-Community/ERCF_v2)
 - [ ] Ultimaker Cura Support
 
   [^1]:https://www.maicar.com/GML/Ananke.html
